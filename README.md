@@ -1,1 +1,3 @@
 # localservice
+
+npm run dev
