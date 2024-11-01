@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1{
+    color: brown;
+}
+
+.bg-color1 {
+    background: #252323;
+}
+.color2 {
+    color: #A99985;
+}
+.bg-color2 {
+    background: #A99985;
+}
+.border1 {
+    border-color: #A99985;
+}
+
+
+*{
+    color: white
+}
+
+#subnavbar::-webkit-scrollbar{
+    display: none;
+}
