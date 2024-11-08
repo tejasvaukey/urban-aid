@@ -10,10 +10,14 @@ h1{
     background: #252323;
 }
 .color2 {
-    color: #A99985;
+    color: #c2aa8d;
 }
 .bg-color2 {
-    background: #A99985;
+    
+    background-color: #c2aa8d;
+}
+.bg-color3{
+    background-color: #ad9477;
 }
 .border1 {
     border-color: #A99985;
@@ -24,6 +28,30 @@ h1{
     color: white
 }
 
+
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 30px;
+    width: 8px; 
+    border: 3px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:  #A99985; 
+}
+
+
 #subnavbar::-webkit-scrollbar{
     display: none;
 }
+  

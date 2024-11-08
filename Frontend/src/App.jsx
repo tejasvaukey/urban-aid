@@ -1,17 +1,18 @@
-import {Navbar, HomePage} from './components/index'
+import { Navbar, ServiceProvider, Footer } from "./components/index";
 
 export default function App() {
   return (
     <>
-    <Navbar />
-    <HomePage />
+      <Navbar />
+      <ServiceProvider />
+      <Footer />
+      
 
-    {/* <BrowserRouter>
+      {/* <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<HomePage />} />
       </Routes>
     </BrowserRouter> */}
-
     </>
   );
 }
