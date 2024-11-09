@@ -1,12 +1,20 @@
-import { Navbar, ServiceProvider, Footer } from "./components/index";
+import {
+  Navbar,
+  ServiceProvider,
+  Footer,
+  HomePage,
+  LandingPage,
+  SubNavbar,
+} from "./components/index";
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <ServiceProvider />
+      {/* <SubNavbar /> */}
+      {/* <ServiceProvider /> */}
+      <LandingPage />
       <Footer />
-      
 
       {/* <BrowserRouter>
       <Routes>

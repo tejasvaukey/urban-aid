@@ -2,13 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+#landingBG {
+
+    background-image: url('./assets/images/photo-collage.png.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Or any height you prefer */
+    /* filter: grayscale(20%) sepia(30%); */
+    filter: brightness(0.8)  contrast(1.2);
+      
+}
+.shadoww{
+ 
+    filter: drop-shadow(1px 1px 5px rgb(8, 6, 6));
+
+}
+
 h1{
-    color: brown;
+    color: #000000;
 }
 
 .bg-color1 {
     background: #252323;
 }
+.bg-color5 {
+    background: #1c1919;
+    /* #181C14 */
+}
+
 .color2 {
     color: #c2aa8d;
 }
