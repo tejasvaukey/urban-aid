@@ -1,44 +1,22 @@
 import { useState } from "react";
 
-const UserAddress = () => {
-  const [addressHolderName, setaddressHolderName] = useState("");
-  const [addressPhoneNo, setAddressPhoneNo] = useState("");
-  const [addressName, setAddressName] = useState("");
-  const [streetAddress, setStreetAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-  const [zipcode, setZipcode] = useState("");
-  const [country, setCountry] = useState("");
-  const [UserAddress, setUserAddress] = useState([]);
-  const handleAddress = (e) => {
-    e.prventDefault();
-    const newAddress = {
-      addressHolderName,
-      addressPhoneNo,
-      addressName,
-      streetAddress,
-      city,
-      state,
-      zipcode,
-      country,
-    };
-    setUserAddress(newAddress);
-    console.log(UserAddress);
-  };
+const UserAddress = ({ userData, setUserData }) => {
   return (
     <div>
-      <div className="flex justify-between items-center w-1/2">
-        <h3 className="font-semibold mb-2 text-lg">3. Address</h3>
+      <div className="flex justify-between items-center w-1/2 ">
         <button className="text-sm text-blue-500">
           Use my current location
         </button>
+        <button className="text-sm text-blue-500">skip</button>
       </div>
       <form onSubmit={(e) => handleAddress(e)}>
         <div className="mb-2">
           <p>Full Name</p>
           <input
-            value={addressHolderName}
-            onChange={(e) => setaddressHolderName(e.target.value)}
+            onChange={(e) =>
+              setUserData({ ...userData, addressHolderName: e.target.value })
+            }
+            value={userData.addressHolderName}
             required
             type="text"
             className="border-b-2 border-black w-1/2 bg-transparent outline-none"
@@ -48,8 +26,10 @@ const UserAddress = () => {
         <div className="mb-2">
           <p>Phone no.</p>
           <input
-            value={addressPhoneNo}
-            onChange={(e) => setAddressPhoneNo(e.target.value)}
+            onChange={(e) =>
+              setUserData({ ...userData, addressPhoneNo: e.target.value })
+            }
+            value={userData.addressPhoneNo}
             required
             type="text"
             className="border-b-2 border-black w-1/2 bg-transparent outline-none"
@@ -59,8 +39,10 @@ const UserAddress = () => {
         <div className="mb-2">
           <p>Appartment name/House no.</p>
           <input
-            value={addressName}
-            onChange={(e) => setAddressName(e.target.value)}
+            onChange={(e) =>
+              setUserData({ ...userData, addressName: e.target.value })
+            }
+            value={userData.addressName}
             type="text"
             className="border-b-2 border-black w-1/2 bg-transparent outline-none"
             placeholder="Building, Flat name/no."
@@ -69,8 +51,10 @@ const UserAddress = () => {
         <div className="mb-2">
           <p>Street Address</p>
           <input
-            value={streetAddress}
-            onChange={(e) => setStreetAddress(e.target.value)}
+            onChange={(e) =>
+              setUserData({ ...userData, streetAddress: e.target.value })
+            }
+            value={userData.streetAddress}
             required
             type="text"
             className="border-b-2 border-black w-1/2 bg-transparent outline-none"
@@ -81,8 +65,10 @@ const UserAddress = () => {
           <div className="w-1/2">
             <p>City</p>
             <input
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
+              onChange={(e) =>
+                setUserData({ ...userData, city: e.target.value })
+              }
+              value={userData.city}
               required
               type="text"
               className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -92,8 +78,10 @@ const UserAddress = () => {
           <div className="w-1/2">
             <p>State</p>
             <input
-              value={state}
-              onChange={(e) => setState(e.target.value)}
+              onChange={(e) =>
+                setUserData({ ...userData, state: e.target.value })
+              }
+              value={userData.state}
               required
               type="text"
               className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -105,8 +93,10 @@ const UserAddress = () => {
           <div className="w-1/2">
             <p>Zipcode</p>
             <input
-              value={zipcode}
-              onChange={(e) => setZipcode(e.target.value)}
+              onChange={(e) =>
+                setUserData({ ...userData, zipcode: e.target.value })
+              }
+              value={userData.zipcode}
               required
               type="text"
               className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -116,8 +106,10 @@ const UserAddress = () => {
           <div className="w-1/2">
             <p>Country</p>
             <input
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
+              onChange={(e) =>
+                setUserData({ ...userData, country: e.target.value })
+              }
+              value={userData.country}
               required
               type="text"
               className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -125,10 +117,6 @@ const UserAddress = () => {
             />
           </div>
         </div>
-        <button className="text-sm text-blue-500">skip</button> <br />
-        <button className="px-4 py-2 bg-blue-950 text-white rounded-lg mt-5">
-          Next
-        </button>
       </form>
     </div>
   );

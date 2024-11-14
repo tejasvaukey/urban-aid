@@ -6,6 +6,7 @@ import {
   LandingPage,
   SubNavbar,
   Register,
+  UserRegistration,
 } from "./components/index";
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
       {/* <LandingPage /> */}
       {/* <HomePage /> */}
       {/* <Footer /> */}
-      <Register />
+      <UserRegistration />
 
       {/* <BrowserRouter>
       <Routes>

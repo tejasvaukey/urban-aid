@@ -9,5 +9,6 @@ import UserOTP from "./UserOTP";
 import UserForm from "./UserForm";
 import UserAddress from "./UserAddress";
 import UserTerms from "./UserTerms";
+import UserRegistration from "./UserRegistration";
 
-export {Navbar, SubNavbar, HomePage, ServiceProvider, Footer, LandingPage, Register, UserForm, UserOTP, UserAddress, UserTerms}
+export {Navbar, SubNavbar, HomePage, ServiceProvider, Footer, LandingPage, Register, UserForm, UserOTP, UserAddress, UserTerms, UserRegistration}

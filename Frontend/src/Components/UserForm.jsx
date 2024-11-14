@@ -1,31 +1,12 @@
-import { useState } from "react";
-
-export default function UserForm() {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [users, setUsers] = useState([]);
-  const handleUser = (e) => {
-    e.preventDefault();
-    const newUser = {
-      name,
-      phone,
-      email,
-      password,
-    };
-    setUsers([...users, newUser]);
-  };
-
+function UserForm({ userData, setUserData }) {
   return (
     <div>
-      <h3 className="font-semibold mb-2 text-lg">1. Enter credentials</h3>
-      <form onSubmit={(e) => handleUser(e)}>
+      <form>
         <div className="mb-5">
           <p className="text-xl mb-2">Name</p>
           <input
-            onChange={(e) => setName(e.target.value)}
-            value={name}
+            onChange={(e) => setUserData({ ...userData, name: e.target.value })}
+            value={userData.name}
             required
             type="text"
             className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -35,8 +16,10 @@ export default function UserForm() {
         <div className="mb-5">
           <p className="text-xl mb-2">Phone no.</p>
           <input
-            onChange={(e) => setPhone(e.target.value)}
-            value={phone}
+            onChange={(e) =>
+              setUserData({ ...userData, phone: e.target.value })
+            }
+            value={userData.phone}
             required
             type="text"
             className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -46,28 +29,31 @@ export default function UserForm() {
         <div className="mb-5">
           <p className="text-xl mb-2">Email</p>
           <input
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+            onChange={(e) =>
+              setUserData({ ...userData, email: e.target.value })
+            }
+            value={userData.email}
             type="text"
             className="border-b-2 border-black w-full bg-transparent outline-none"
             placeholder="Enter Email"
           />
         </div>
         <div className="mb-5">
-          <p className="text-xl mb-2">Password</p>
+          <p className="text-xl mb-2">Create Password</p>
           <input
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
+            onChange={(e) =>
+              setUserData({ ...userData, password: e.target.value })
+            }
+            value={userData.password}
             required
             type="password"
             className="border-b-2 border-black w-full bg-transparent outline-none"
             placeholder="Password"
           />
         </div>
-        <button className="px-4 py-2 bg-blue-950 text-white rounded-lg mt-5">
-          Next
-        </button>
       </form>
     </div>
   );
 }
+
+export default UserForm;

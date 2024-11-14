@@ -1,18 +1,16 @@
 import { useState } from "react";
 
-function UserTerms() {
+function UserTerms({ userData, setUserData }) {
   const [accepted, setAccepted] = useState(false);
 
   const handleCheckboxChange = () => {
     setAccepted(!accepted);
+    setUserData({ ...userData, readTerms: true });
   };
 
   return (
     <div className="pr-10">
       <div className="">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">
-          Terms and Conditions
-        </h2>
         <p className="text-gray-700 mb-4">
           By registering on Urban Aid, you agree to these Terms and Conditions.
           Please read them carefully.
@@ -65,7 +63,7 @@ function UserTerms() {
               type="checkbox"
               className="form-checkbox h-5 w-5 text-blue-600"
               checked={accepted}
-              onChange={handleCheckboxChange}
+              onChange={() => handleCheckboxChange()}
             />
             <span className="ml-2 text-gray-700">
               I have read and agree to the Terms and Conditions

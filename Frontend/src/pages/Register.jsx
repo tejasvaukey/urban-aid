@@ -88,24 +88,7 @@ export default function Register() {
             </form>
           </div>
           {/* OTP  */}
-          <div className="hidden">
-            <h3 className="font-semibold mb-2 text-lg">2. OTP</h3>
-            <form className=" mb-5">
-              <div className="border-b-2 border-black flex justify-between  w-1/3 mt-2">
-                <input
-                  type="text"
-                  className="outline-none bg-transparent"
-                  placeholder="Enter OTP sent to your Phone no."
-                />
-                <button onClick={() => setIsVerified}>
-                  {isVerified ? "verified" : "verify"}
-                </button>
-              </div>
-              <button className="px-4 py-2 bg-blue-950 text-white rounded-lg mt-5">
-                Next
-              </button>
-            </form>
-          </div>
+          
           {/* Address  */}
           <UserAddress />
         </div>
