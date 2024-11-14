@@ -1,4 +1,4 @@
-import { UserAddress} from "../components/index";
+import { UserAddress } from "../components/index";
 import { useState } from "react";
 
 export default function Register() {
@@ -82,7 +82,7 @@ export default function Register() {
                   placeholder="Password"
                 />
               </div>
-              <button className="px-4 py-2 bg-blue-950 text-white rounded-lg mt-5">
+              <button className="px-4 py-2 bg-blue-950 text-white rounded-lg mt-5 ">
                 Next
               </button>
             </form>
