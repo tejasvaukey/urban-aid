@@ -1,11 +1,14 @@
 import providers from "../utils/data.jsx";
 import tailorPFP from "../assets/images/tailor.png";
-import { img1, img2, img3 } from "../utils/images.js";
+import { img1, img2, img3, img4, img5 } from "../utils/images.js";
 
 export default function ServiceProvider() {
   return (
-    <main className="bg-color1 px-64 py-8">
-      <section id="info" className="flex w-full  tracking-wider">
+    <main className=" px-72 py-28 text-white bg-card2 ">
+      <section
+        id="info"
+        className="flex w-full  tracking-wider border-white border p-10 rounded-lg"
+      >
         <div className=" w-1/4 p-2 pl-0 mr-5">
           <img
             className="border-2 border-[#A99985] w-[300px] h-[300px] rounded-xl object-cover"
@@ -58,19 +61,23 @@ export default function ServiceProvider() {
           </div>
         </div>
       </section>
-      <section id="servicesProvided" className="mt-20">
-        <h2 className="color2 text-xl semibold">Services Provided:</h2>
-        <ul className="mt-6">
-          {providers[0].services.map((service, index) => (
-            <li className="mb-2" key={index}>
-              {service.category}
-              <ul>
-                <li className="list-disc ml-8 italic">{service.description}</li>
-              </ul>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-20 mx-14 flex justify-around items-center h-[150px]">
+      <section id="servicesProvided" className="mt-20 flex justify-between ">
+        <div>
+          <h2 className="color2 text-xl semibold">Services Provided:</h2>
+          <ul className="mt-6">
+            {providers[0].services.map((service, index) => (
+              <li className="mb-2" key={index}>
+                {service.category}
+                <ul>
+                  <li className="list-disc ml-8 italic">
+                    {service.description}
+                  </li>
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="  flex flex-col justify-between items-center h-full  gap-10">
           <div className=" text-center ">
             <span className="color2">
               Availability: <br />
@@ -79,18 +86,20 @@ export default function ServiceProvider() {
             Saturday: 10 AM – 4 PM <br />
             Sunday: Closed
           </div>
-          <div className="h-full border border1"></div>
+          <div className="w-full border border1"></div>
           <div className="text-center">
             <span className="color2">Average response time:</span> <br />
             4-5 hrs
           </div>
-          <div className="h-full border border1"></div>
+          <div className="w-full border border1"></div>
           <div className="text-center">
             <span className="color2">Average work time:</span> <br />
             1-2 weeks
           </div>
         </div>
       </section>
+
+      {/* gallery */}
       <section id="previousWork" className="mt-20 mb-20 ">
         <h2 className="color2 text-xl font-semibold mb-10">Previous Works:</h2>
         <div className="grid grid-cols-3 grid-rows-2 gap-28 w-full">
@@ -104,10 +113,10 @@ export default function ServiceProvider() {
             <img src={img3} alt="" className="object-cover h-full w-full" />
           </div>
           <div className="bg-black h-96 w-96 ">
-            <img src={img1} alt="" className="object-cover h-full w-full" />
+            <img src={img4} alt="" className="object-cover h-full w-full" />
           </div>
           <div className="bg-black h-96 w-96 ">
-            <img src={img1} alt="" className="object-cover h-full w-full" />
+            <img src={img5} alt="" className="object-cover h-full w-full" />
           </div>
           <div className="bg-black h-96 w-96 relative">
             <img
@@ -121,13 +130,13 @@ export default function ServiceProvider() {
           </div>
         </div>
       </section>
+
+      {/* reviews  */}
       <section id="customerReviews">
-        <h2 className="color2 text-xl font-semibold mb-10">
-          Customer Reviews:
-        </h2>
+        <h2 className="color2 text-xl font-semibold mb-8">Customer Reviews:</h2>
         <div>
           <ol className="pl-5 list-decimal">
-            <li>
+            <li className="mb-4">
               <h3>Emily W.</h3>
               <p>★★★★★</p>
               <p className="">
@@ -136,7 +145,7 @@ export default function ServiceProvider() {
                 professional and kind. Highly recommend! &rdquo;
               </p>
             </li>
-            <li>
+            <li className="mb-4">
               <h3>Michael S.</h3>
               <p>★★★★☆</p>
               <p className="">
@@ -145,7 +154,7 @@ export default function ServiceProvider() {
                 than expected, but overall, great service! &rdquo;
               </p>
             </li>
-            <li>
+            <li className="mb-4">
               <h3>Sophia L.</h3>
               <p>★★★★★</p>
               <p className="">
@@ -154,7 +163,7 @@ export default function ServiceProvider() {
                 Excellent craftsmanship and attention to detail. &rdquo;
               </p>
             </li>
-            <li>
+            <li className="mb-4">
               <h3>David R.</h3>
               <p>★★★★☆</p>
               <p className="">

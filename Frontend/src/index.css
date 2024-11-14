@@ -9,13 +9,41 @@
     background-position: center;
     height: 100vh; /* Or any height you prefer */
     /* filter: grayscale(20%) sepia(30%); */
-    filter: brightness(0.8)  contrast(1.2);
+    filter: brightness(0.8)  contrast(1.05);
       
 }
+
+.service-item img {
+    
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* height: 100vh; Or any height you prefer */
+    /* filter: grayscale(20%) sepia(30%); */
+    /* filter: brightness(90%) contrast(1.0); */
+    border: 2px solid black;    
+
+ } 
+
+
+.service-item:hover {
+    transform: scale(1.03);
+    transition: all;
+    transition-duration: 0.2s;
+    transition-delay: 0ms;
+}
+
+
+
 .shadoww{
  
     filter: drop-shadow(1px 1px 5px rgb(8, 6, 6));
 
+}
+.bg-card1 {
+    background-color: rgb(255, 255, 255);
+}
+.bg-card2 {
+    background-color: #09112b;
 }
 
 h1{
@@ -44,10 +72,10 @@ h1{
     border-color: #A99985;
 }
 
-
+/* 
 *{
-    color: white
-}
+    color: black
+} */
 
 
 

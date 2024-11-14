@@ -5,16 +5,19 @@ import {
   HomePage,
   LandingPage,
   SubNavbar,
+  Register,
 } from "./components/index";
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <SubNavbar /> */}
       {/* <ServiceProvider /> */}
-      <LandingPage />
-      <Footer />
+      {/* <LandingPage /> */}
+      {/* <HomePage /> */}
+      {/* <Footer /> */}
+      <Register />
 
       {/* <BrowserRouter>
       <Routes>
