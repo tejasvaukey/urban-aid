@@ -1,6 +1,6 @@
 import { useState } from "react";
-import UserOption from "./UserOption";
-import { UserForm, UserOTP, UserAddress, UserTerms } from "./index";
+
+import { UserOption, UserForm, UserOTP, UserAddress, UserTerms } from "./index";
 
 const UserSide = () => {
   const [page, setPage] = useState(0);

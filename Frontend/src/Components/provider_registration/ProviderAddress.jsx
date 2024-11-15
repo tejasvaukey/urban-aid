@@ -1,4 +1,4 @@
-const UserAddress = ({ userData, setUserData, pageTitle, page }) => {
+const ProviderAddress = ({ userData, setUserData, pageTitle, page }) => {
   return (
     <div>
       <h2 className="text-blue-900 text-3xl italic font-bold ">
@@ -124,4 +124,4 @@ const UserAddress = ({ userData, setUserData, pageTitle, page }) => {
   );
 };
 
-export default UserAddress;
+export default ProviderAddress;

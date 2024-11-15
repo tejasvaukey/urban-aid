@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function OTP({ userData, setUserData, pageTitle, page }) {
+export default function UserOTP({ userData, setUserData, pageTitle, page }) {
   const [isVerified, setIsVerified] = useState(false);
   const handleVerification = () => {
     setIsVerified(!isVerified);
