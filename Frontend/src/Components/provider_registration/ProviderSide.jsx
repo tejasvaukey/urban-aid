@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
-
 const ProviderSide = () => {
   return (
-    <div className="flex flex-col justify-center  text-center gap-10 h-full transform -translate-y-14">
-      <h2 className="text-blue-900 text-3xl italic font-bold  ">
+    <div className="flex flex-col justify-center  text-center gap-10 h-[700px]  ">
+      <h2 className="text-blue-500 text-3xl italic font-bold  ">
         Start offering your expertise to a growing community.
       </h2>
 
@@ -17,11 +15,9 @@ const ProviderSide = () => {
       </div>
 
       <div className="flex justify-center">
-        <Link rel="stylesheet" href="/register/user">
-          <button className="bg-blue-900 py-2 px-4 rounded-lg font-semibold text-white">
-            Register as a Service Provider
-          </button>
-        </Link>
+        <button className="bg-blue-400 py-2 px-4 rounded-lg font-semibold text-black">
+          Register as a Service Provider
+        </button>
       </div>
     </div>
   );

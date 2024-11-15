@@ -1,12 +1,18 @@
-function UserForm({ userData, setUserData }) {
+function ProviderForm({ providerData, setProviderData, pageTitle, page }) {
   return (
     <div>
+      <h2 className="text-blue-900 text-3xl italic font-bold  ">
+        Start offering your expertise to a growing community.
+      </h2>
+      <h3 className="font-semibold mb-2 mt-10 text-lg">{pageTitle[page]}</h3>
       <form>
         <div className="mb-5">
           <p className="text-xl mb-2">Name</p>
           <input
-            onChange={(e) => setUserData({ ...userData, name: e.target.value })}
-            value={userData.name}
+            onChange={(e) =>
+              setProviderData({ ...providerData, name: e.target.value })
+            }
+            value={providerData.name}
             required
             type="text"
             className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -17,9 +23,9 @@ function UserForm({ userData, setUserData }) {
           <p className="text-xl mb-2">Phone no.</p>
           <input
             onChange={(e) =>
-              setUserData({ ...userData, phone: e.target.value })
+              setProviderData({ ...providerData, phone: e.target.value })
             }
-            value={userData.phone}
+            value={providerData.phone}
             required
             type="text"
             className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -30,9 +36,9 @@ function UserForm({ userData, setUserData }) {
           <p className="text-xl mb-2">Email</p>
           <input
             onChange={(e) =>
-              setUserData({ ...userData, email: e.target.value })
+              setProviderData({ ...providerData, email: e.target.value })
             }
-            value={userData.email}
+            value={providerData.email}
             type="text"
             className="border-b-2 border-black w-full bg-transparent outline-none"
             placeholder="Enter Email"
@@ -42,9 +48,9 @@ function UserForm({ userData, setUserData }) {
           <p className="text-xl mb-2">Create Password</p>
           <input
             onChange={(e) =>
-              setUserData({ ...userData, password: e.target.value })
+              setProviderData({ ...providerData, password: e.target.value })
             }
-            value={userData.password}
+            value={providerData.password}
             required
             type="password"
             className="border-b-2 border-black w-full bg-transparent outline-none"
@@ -56,4 +62,4 @@ function UserForm({ userData, setUserData }) {
   );
 }
 
-export default UserForm;
+export default ProviderForm;

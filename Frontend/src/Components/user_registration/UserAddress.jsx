@@ -1,8 +1,12 @@
 import { useState } from "react";
 
-const UserAddress = ({ userData, setUserData }) => {
+const UserAddress = ({ userData, setUserData, pageTitle, page }) => {
   return (
     <div>
+      <h2 className="text-blue-900 text-3xl italic font-bold ">
+        Register as a User
+      </h2>
+      <h3 className="font-semibold mb-2 mt-10 text-lg">{pageTitle[page]}</h3>
       <div className="flex justify-between items-center w-1/2 ">
         <button className="text-sm text-blue-500">
           Use my current location

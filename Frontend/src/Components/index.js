@@ -4,12 +4,8 @@ import HomePage from "../pages/HomePage";
 import ServiceProvider from "../pages/ServiceProvider";
 import Footer from "./Footer";
 import LandingPage from "../pages/LandingPage";
-import Register from "../pages/Register";
-import UserOTP from "./UserOTP";
-import UserForm from "./UserForm";
-import UserAddress from "./UserAddress";
-import UserTerms from "./UserTerms";
-import UserRegistration from "./UserRegistration";
-import ProviderRegistration from "./RegistrationPage";
 
-export {Navbar, SubNavbar, HomePage, ServiceProvider, Footer, LandingPage, Register, UserForm, UserOTP, UserAddress, UserTerms, UserRegistration, ProviderRegistration}
+import ProviderRegistration from "../pages/RegistrationPage";
+
+
+export {Navbar, SubNavbar, HomePage, ServiceProvider, Footer, LandingPage, ProviderRegistration}

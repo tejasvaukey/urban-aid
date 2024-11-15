@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
-
-const UserSide = () => {
+const UserOption = ({ page, setPage }) => {
   return (
-    <div className="flex flex-col justify-center  text-center gap-10 h-full transform -translate-y-14">
-      <h2 className="text-blue-500 text-3xl italic font-bold ">
+    <div className="flex flex-col justify-center  text-center gap-10 h-[700px] ">
+      <h2 className="text-blue-900 text-3xl italic font-bold ">
         Find Trusted Experts for Your Every Need
       </h2>
 
@@ -17,14 +15,15 @@ const UserSide = () => {
       </div>
 
       <div className="flex justify-center">
-        <Link rel="stylesheet" href="/register/user">
-          <button className="bg-blue-500 py-2 px-4 rounded-lg font-semibold text-white">
-            Register as a User
-          </button>
-        </Link>
+        <button
+          className="bg-blue-900 py-2 px-4 rounded-lg font-semibold text-white"
+          onClick={() => setPage((current) => current + 1)}
+        >
+          Register as a User
+        </button>
       </div>
     </div>
   );
 };
 
-export default UserSide;
+export default UserOption;

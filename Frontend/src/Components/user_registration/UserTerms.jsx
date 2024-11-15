@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function UserTerms({ userData, setUserData }) {
+function UserTerms({ userData, setUserData, pageTitle, page }) {
   const [accepted, setAccepted] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -10,6 +10,10 @@ function UserTerms({ userData, setUserData }) {
 
   return (
     <div className="pr-10">
+      <h2 className="text-blue-900 text-3xl italic font-bold ">
+        Register as a User
+      </h2>
+      <h3 className="font-semibold mb-2 mt-10 text-lg">{pageTitle[page]}</h3>
       <div className="">
         <p className="text-gray-700 mb-4">
           By registering on Urban Aid, you agree to these Terms and Conditions.

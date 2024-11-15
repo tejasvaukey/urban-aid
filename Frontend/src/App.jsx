@@ -5,15 +5,16 @@ import {
   Footer,
   HomePage,
   LandingPage,
-  UserRegistration,
   ProviderRegistration,
 } from "./components/index";
+import { UserRegistration } from "./components/user_registration/index";
 import { Routes, Route, useLocation } from "react-router-dom";
+import RegistrationPage from "./pages/RegistrationPage";
 
 export default function App() {
   const location = useLocation();
 
-  const hideOnRoutes = ["/register/user", "/register/provider"];
+  const hideOnRoutes = ["/register/user", "/register/provider", "/register/"];
   const shouldHide = hideOnRoutes.includes(location.pathname);
 
   return (
@@ -29,6 +30,7 @@ export default function App() {
         />
         <Route exact path="/register/user" element={<UserRegistration />} />
         <Route exact path="/provider" element={<ServiceProvider />} />
+        <Route exact path="/register" element={<RegistrationPage />} />
       </Routes>
       {!shouldHide && <Footer />}
     </>
