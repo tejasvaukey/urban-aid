@@ -17,6 +17,7 @@ import {
   real,
   tech,
 } from "../utils/images";
+import LoginCard from "../components/LoginCard";
 
 const LandingPage = () => {
   return (
@@ -25,6 +26,7 @@ const LandingPage = () => {
         id="landingBG"
         className=" h-svh w-full absolute overflow-x-hidden"
       ></div>
+      {/* <LoginCard className="absolute z-50 top-0" /> */}
       {/* Hero Section */}
       <section className="hero-section text-center py-20 h-svh flex flex-col items-center justify-center z-10 relative">
         <h1 className="text-[200px] font-bold leading-none shadoww ">

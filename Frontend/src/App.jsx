@@ -11,6 +11,8 @@ import {
 import { Routes, Route, useLocation } from "react-router-dom";
 import RegistrationPage from "./pages/RegistrationPage";
 import Profile from "./pages/Profile";
+import LoginCard from "./components/LoginCard";
+import SearchPage from "./pages/SearchPage";
 
 export default function App() {
   const location = useLocation();
@@ -25,21 +27,16 @@ export default function App() {
   const shouldHide = hideOnRoutes.includes(location.pathname);
 
   return (
-    <>
+    <div className="relative min-h-screen">
       {!shouldHide && <Navbar />}
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/home" element={<HomePage />} />
         <Route exact path="/profile" element={<Profile />} />
-        <Route
-          exact
-          path="/register/provider"
-          element={<ProviderRegistration />}
-        />
-        <Route exact path="/provider" element={<ServiceProvider />} />
         <Route exact path="/register" element={<RegistrationPage />} />
+        <Route exact path="/search" element={<SearchPage />} />
       </Routes>
       {!shouldHide && <Footer />}
-    </>
+    </div>
   );
 }
