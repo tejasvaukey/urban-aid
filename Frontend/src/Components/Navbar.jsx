@@ -35,7 +35,7 @@ export default function Navbar({ setQuery }) {
   return (
     <>
       {/* Navbar */}
-      <nav className="py-4 px-24 h-20 w-full fixed z-20 text-white bg-teal-950 bg-opacity-90 backdrop-blur-sm">
+      <nav className="py-4 px-24 h-20 w-full fixed z-20 text-white bg-teal-950 bg-opacity-100 backdrop-blur-sm">
         <header className="flex justify-between items-center px-3 rounded-full">
           {/* Logo Section */}
           {/* <a > */}
@@ -98,7 +98,9 @@ export default function Navbar({ setQuery }) {
 
             {/* Login Button or Profile Avatar */}
             {isLoggedIn ? (
-              <div className="w-10 h-10 bg-white rounded-full"></div>
+              <a href='/account/profile' className="w-10 h-10 bg-white rounded-full">
+
+              </a>
             ) : (
               <button
                 onClick={toggleLoginCard}
