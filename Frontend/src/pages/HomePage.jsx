@@ -1,26 +1,58 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaStar, FaHistory, FaCalendarAlt } from "react-icons/fa";
+import { SubNavbar } from "../components";
+import RecommendedPage from "../components/home/RecommendedPage";
 
 const HomePage = () => {
+  const links = [
+    { id: 1, title: "Favorites", icon: <FaStar />, path: "/favorites" },
+    {
+      id: 2,
+      title: "Recent Searches",
+      icon: <FaHistory />,
+      path: "/recent-searches",
+    },
+    {
+      id: 3,
+      title: "Pending Bookings",
+      icon: <FaCalendarAlt />,
+      path: "/bookings",
+    },
+  ];
   return (
-    <div className="w-full h-full bg-gray-100">
+    <div className="w-full h-full bg-gray-100 pt-20">
       {/* User Dashboard Section */}
-      <section className=" bg-blue-200 p-8">
-        <h2 className="text-3xl font-bold text-gray-800">Welcome, John!</h2>
-        <div className="mt-6 flex space-x-6">
-          <button className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-md">
-            Quick Links
-          </button>
-          <button className="bg-green-500 text-white py-2 px-4 rounded-lg shadow-md">
-            Recent Activities
-          </button>
-          <button className="bg-yellow-500 text-white py-2 px-4 rounded-lg shadow-md">
-            User Reviews
-          </button>
+      <section className=" bg-blue-200 p-8 pl-0">
+        <h2 className="text-3xl font-bold text-gray-800  px-28">
+          Welcome, John!
+        </h2>
+        <div className=" rounded-lg  p-6 px-28">
+          <h2 className="text-xl font-semibold mb-4 text-blue-900">
+            Quick Access
+          </h2>
+          <div className="grid grid-cols-3 gap-4">
+            {links.map((link) => (
+              <Link
+                to={link.path}
+                key={link.id}
+                className="flex flex-col items-center p-4 bg-white rounded-md shadow-lg hover:bg-blue-50 transition duration-300"
+              >
+                <div className="text-3xl text-blue-900 mb-2">{link.icon}</div>
+                <span className="text-sm font-medium text-gray-700">
+                  {link.title}
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
+      {/* quick access  */}
+      <RecommendedPage />
+
       {/* Find a Service Section */}
-      <section className="h-screen bg-white p-8">
+      <section className="h-screen bg-white p-8 px-24">
         <h2 className="text-2xl font-semibold text-gray-800">Find a Service</h2>
         <div className="mt-6 flex space-x-6">
           <button className="bg-blue-400 text-white py-2 px-4 rounded-lg shadow-md w-1/3">

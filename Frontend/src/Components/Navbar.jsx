@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import logoImage from "../assets/images/logo2.jpg";
 import LoginCard from "./LoginCard"; // Import LoginCard component
+import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ setQuery }) {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [showLoginCard, setShowLoginCard] = useState(false);
   const loginCardRef = useRef(null);
@@ -34,10 +35,11 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <nav className="py-4 px-24 h-20 w-full fixed z-20 text-white bg-white bg-opacity-10 backdrop-blur-sm">
+      <nav className="py-4 px-24 h-20 w-full fixed z-20 text-white bg-teal-950 bg-opacity-90 backdrop-blur-sm">
         <header className="flex justify-between items-center px-3 rounded-full">
           {/* Logo Section */}
-          <div className="flex items-center justify-start w-1/5">
+          {/* <a > */}
+          <Link to="/home" className="flex items-center justify-start w-1/5">
             <img
               src={logoImage}
               alt="Logo"
@@ -46,14 +48,16 @@ export default function Navbar() {
             <h4 className="font-bold tracking-wide text-white text-2xl leading-none shadoww">
               Urban Aid
             </h4>
-          </div>
+          </Link>
+          {/* </a> */}
 
           {/* Search Section */}
           <div className="px-5 rounded-full w-2/5 flex items-center border border-gray-300">
             <input
               type="text"
-              className="flex-grow outline-none h-10 bg-transparent text-white placeholder-gray-600 font-semibold"
+              className="flex-grow outline-none h-10 bg-transparent text-white placeholder-gray-500 font-semibold"
               placeholder="Search for service..."
+              onChange={(e) => setQuery(e.target.value.toLowerCase())}
             />
             <button>
               <svg
